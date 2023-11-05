@@ -1,0 +1,103 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+:root {
+  --primary: rgba(255, 255, 255, 1);
+  --secondary: rgba(244, 245, 247, 1);
+  --bodybackground: rgba(205, 225, 248, 1);
+  --textColor: rgba(103, 116, 139, 1);
+  --hoverclr: rgba(181, 182, 186, 1);
+}
+
+#main_workspace {
+    display: flex;
+    gap: 25px;
+  padding: 35px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+#main_workspace h4 {
+  border-bottom: 1px solid;
+  border-color: var(--textColor);
+  padding: 3px 7px;
+  margin-bottom: 5px;
+}
+.columnBlocks {
+    padding: 15px 10px;
+    min-width: 350px;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 25px;
+    gap: 5px;
+  /* justify-content: flex-start; */
+}
+
+.columnBlocks:hover .createBtn {
+  display: inline-block;
+}
+.createBtn {
+  display: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 12px;
+  border: none;
+}
+.createBtn:hover {
+  background-color: var(--hoverclr);
+}
+.issueCard {
+  display: flex;
+}
+.issueCardText {
+  flex-grow: 1;
+}
+
+.card {
+    background-color: var(--primary);
+    padding: 8px 10px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 1px 1px 2px gray;
+    border-radius: 7px;
+  position: relative;
+  margin: 3px 0px;
+  min-width: 250px;
+  min-height: 55px;
+  align-items: center;
+}
+
+.card > div {
+  width: 200px;
+  height: fit-content;
+}
+
+/* delete button */
+.card > button {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  padding: 2px 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 4px;
+  gap: 10px;
+}
+
+.hide {
+  display: none;
+}
+.dontShow {
+  visibility: hidden;
+}
+.show {
+  display: block;
+}
